@@ -16,7 +16,7 @@ export function LoveNote() {
         </p>
         <div className="reveal mt-12 flex items-center justify-center gap-3">
           <span className="h-px w-12 bg-[color:var(--rose-soft)]" />
-          <span className="font-script text-xl text-[color:var(--rose-deep)]">— [Your Name]</span>
+          <span className="font-script text-xl text-[color:var(--rose-deep)]">— Rahat</span>
           <span className="h-px w-12 bg-[color:var(--rose-soft)]" />
         </div>
       </div>
