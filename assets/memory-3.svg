@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="A quiet path made for walking">
+  <defs>
+    <linearGradient id="scene" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d7e3d1"/>
+      <stop offset=".52" stop-color="#9cb28d"/>
+      <stop offset="1" stop-color="#51433d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#scene)"/>
+  <path d="M480 900 C510 700 560 555 610 405 C665 560 735 710 820 900Z" fill="#e7d7c4"/>
+  <path d="M0 520 C180 460 330 520 470 470 C420 590 355 735 310 900 H0Z" fill="#405b43" opacity=".7"/>
+  <path d="M1200 520 C1040 465 920 522 750 470 C820 610 900 760 945 900 H1200Z" fill="#354d3c" opacity=".74"/>
+  <circle cx="605" cy="318" r="28" fill="#fff5e9"/>
+</svg>

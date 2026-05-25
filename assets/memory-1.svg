@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="A soft sunset over water">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8b9aa"/>
+      <stop offset="0.46" stop-color="#f2d7bd"/>
+      <stop offset="1" stop-color="#5e5369"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4d516b"/>
+      <stop offset="1" stop-color="#d88b84"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#sky)"/>
+  <circle cx="770" cy="330" r="115" fill="#fff0c7" opacity=".86"/>
+  <path d="M0 590 C210 540 300 640 510 590 C730 535 900 650 1200 575 V900 H0Z" fill="url(#water)"/>
+  <path d="M100 690 C320 655 530 730 760 670 C900 633 1040 662 1180 640" fill="none" stroke="#fff8ec" stroke-width="16" opacity=".36"/>
+</svg>

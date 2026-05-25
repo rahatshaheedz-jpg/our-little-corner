@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Petals and a letter">
+  <rect width="1200" height="900" fill="#f7e9df"/>
+  <rect x="320" y="210" width="560" height="440" rx="18" fill="#fffaf4" transform="rotate(-5 600 430)"/>
+  <path d="M380 330 H760 M380 400 H810 M380 470 H720" stroke="#b89b8c" stroke-width="18" opacity=".5" stroke-linecap="round"/>
+  <g fill="#d95f83" opacity=".86">
+    <ellipse cx="240" cy="300" rx="74" ry="28" transform="rotate(-32 240 300)"/>
+    <ellipse cx="890" cy="250" rx="84" ry="30" transform="rotate(28 890 250)"/>
+    <ellipse cx="850" cy="690" rx="90" ry="34" transform="rotate(-18 850 690)"/>
+    <ellipse cx="270" cy="650" rx="76" ry="28" transform="rotate(18 270 650)"/>
+  </g>
+  <circle cx="630" cy="560" r="54" fill="#d9a441" opacity=".55"/>
+</svg>

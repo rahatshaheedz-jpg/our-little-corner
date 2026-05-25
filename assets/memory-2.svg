@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Two coffee cups on a quiet table">
+  <defs>
+    <linearGradient id="table" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ead7c9"/>
+      <stop offset="1" stop-color="#856f67"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#table)"/>
+  <circle cx="392" cy="430" r="176" fill="#fff8f1"/>
+  <circle cx="392" cy="430" r="112" fill="#7b5447"/>
+  <circle cx="392" cy="430" r="76" fill="#c6906e" opacity=".82"/>
+  <circle cx="780" cy="475" r="162" fill="#fff8f1"/>
+  <circle cx="780" cy="475" r="102" fill="#6b5045"/>
+  <circle cx="780" cy="475" r="68" fill="#d8a27e" opacity=".82"/>
+  <path d="M500 270 C610 180 780 175 910 255" fill="none" stroke="#fff8f1" stroke-width="18" opacity=".32"/>
+  <path d="M250 670 H935" stroke="#533e39" stroke-width="18" opacity=".18"/>
+</svg>
