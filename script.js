@@ -198,6 +198,8 @@ const galleryCaption = document.querySelector("[data-gallery-caption]");
 const memoryGrid = document.querySelector("[data-memory-grid]");
 const toast = document.querySelector("[data-toast]");
 const noButton = document.querySelector("[data-no]");
+const flowerScene = document.querySelector("[data-flower-scene]");
+const flowerYesButton = document.querySelector("[data-flower-yes]");
 let activeReason = 0;
 
 function updateProgress() {
@@ -300,6 +302,12 @@ function celebrate(event) {
   window.setTimeout(() => toast.classList.remove("show"), 3400);
 }
 
+function showFlowerScene() {
+  flowerScene.classList.remove("show");
+  window.setTimeout(() => flowerScene.classList.add("show"), 20);
+  window.setTimeout(() => flowerScene.classList.remove("show"), 5200);
+}
+
 function moveNoButton() {
   const rect = noButton.getBoundingClientRect();
   const padding = 28;
@@ -343,6 +351,8 @@ memoryGrid.querySelectorAll("[data-gallery]").forEach((button) => {
 document.querySelectorAll("[data-yes]").forEach((button) => {
   button.addEventListener("click", celebrate);
 });
+
+flowerYesButton.addEventListener("click", showFlowerScene);
 
 ["mouseenter", "pointerdown", "focus", "touchstart"].forEach((eventName) => {
   noButton.addEventListener(eventName, (event) => {
