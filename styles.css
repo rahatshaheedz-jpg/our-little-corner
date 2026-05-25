@@ -980,13 +980,13 @@ h3 {
 }
 
 .flower-card {
-  width: min(420px, 100%);
+  width: min(440px, 100%);
   display: grid;
   justify-items: center;
-  gap: 20px;
+  gap: 12px;
   border: 1px solid rgba(237, 111, 132, 0.24);
   border-radius: 8px;
-  padding: 30px 24px;
+  padding: 28px 24px 24px;
   background: rgba(255, 253, 253, 0.94);
   box-shadow: 0 30px 80px rgba(184, 50, 104, 0.22);
   transform: translateY(18px) scale(0.94);
@@ -996,25 +996,15 @@ h3 {
   animation: flowerCardIn 520ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
-.flower-card p {
-  margin: 0;
-  color: var(--rose-dark);
-  font-family: var(--font-serif);
-  font-size: clamp(1.8rem, 5vw, 2.8rem);
-  font-weight: 700;
-  line-height: 1.05;
-  text-align: center;
-}
-
 .flower-bot {
   position: relative;
-  width: 210px;
-  height: 210px;
+  width: 170px;
+  height: 158px;
 }
 
 .bot-antenna {
   position: absolute;
-  top: 18px;
+  top: 4px;
   left: 50%;
   width: 42px;
   height: 42px;
@@ -1037,7 +1027,7 @@ h3 {
 
 .bot-head {
   position: absolute;
-  top: 48px;
+  top: 34px;
   left: 50%;
   width: 122px;
   height: 92px;
@@ -1079,7 +1069,7 @@ h3 {
 
 .bot-body {
   position: absolute;
-  bottom: 20px;
+  bottom: 0;
   left: 50%;
   width: 98px;
   height: 72px;
@@ -1091,8 +1081,8 @@ h3 {
 
 .bot-arm {
   position: absolute;
-  right: 35px;
-  bottom: 78px;
+  right: 18px;
+  bottom: 58px;
   width: 62px;
   height: 48px;
   border-right: 8px solid var(--rose-dark);
@@ -1104,6 +1094,221 @@ h3 {
 
 .flower-scene.show .bot-arm {
   animation: offerFlower 1100ms ease-in-out 280ms both;
+}
+
+.flower-bucket {
+  position: relative;
+  width: 250px;
+  height: 190px;
+  margin-top: -6px;
+}
+
+.bucket {
+  position: absolute;
+  right: 72px;
+  bottom: 5px;
+  width: 106px;
+  height: 70px;
+  border: 4px solid var(--rose-dark);
+  border-radius: 16px 16px 30px 30px;
+  background: linear-gradient(180deg, #ffdce7, #f58ba0);
+  box-shadow: 0 16px 34px rgba(184, 50, 104, 0.18);
+}
+
+.bucket::before {
+  position: absolute;
+  top: -34px;
+  left: 14px;
+  width: 70px;
+  height: 44px;
+  border: 4px solid var(--rose-dark);
+  border-bottom: 0;
+  border-radius: 999px 999px 0 0;
+  content: "";
+}
+
+.bucket-stem {
+  position: absolute;
+  bottom: 54px;
+  left: 50%;
+  width: 5px;
+  height: 110px;
+  border-radius: 999px;
+  background: #5e9e68;
+  transform-origin: bottom center;
+}
+
+.stem-1 {
+  transform: translateX(-50%) rotate(-34deg);
+}
+
+.stem-2 {
+  transform: translateX(-50%) rotate(-18deg);
+}
+
+.stem-3 {
+  transform: translateX(-50%) rotate(-5deg);
+}
+
+.stem-4 {
+  transform: translateX(-50%) rotate(12deg);
+}
+
+.stem-5 {
+  transform: translateX(-50%) rotate(28deg);
+}
+
+.stem-6 {
+  transform: translateX(-50%) rotate(42deg);
+}
+
+.bucket-stem::before,
+.bucket-stem::after {
+  position: absolute;
+  width: 24px;
+  height: 12px;
+  border-radius: 999px 999px 0 999px;
+  background: #73bb7d;
+  content: "";
+}
+
+.bucket-stem::before {
+  top: 54px;
+  left: -20px;
+  transform: rotate(-24deg);
+}
+
+.bucket-stem::after {
+  top: 72px;
+  left: 2px;
+  transform: rotate(28deg);
+}
+
+.bucket-flower {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0.65);
+}
+
+.flower-scene.show .bucket-flower {
+  animation: bouquetBloom 680ms ease-out forwards;
+}
+
+.bucket-flower::before {
+  position: absolute;
+  inset: 13px;
+  border-radius: 50%;
+  background: #8f243b;
+  content: "";
+  z-index: 1;
+}
+
+.bucket-flower::after {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 0, #e83f5f 0 30%, transparent 31%),
+    radial-gradient(circle at 100% 50%, #d93052 0 30%, transparent 31%),
+    radial-gradient(circle at 50% 100%, #ee5a75 0 30%, transparent 31%),
+    radial-gradient(circle at 0 50%, #c82042 0 30%, transparent 31%),
+    radial-gradient(circle at 50% 50%, #f06d82 0 46%, transparent 47%);
+  content: "";
+}
+
+.rose-one {
+  left: 32px;
+  top: 50px;
+  animation-delay: 320ms !important;
+}
+
+.rose-two {
+  left: 88px;
+  top: 16px;
+  animation-delay: 420ms !important;
+}
+
+.rose-three {
+  right: 60px;
+  top: 38px;
+  animation-delay: 520ms !important;
+}
+
+.rose-four {
+  left: 58px;
+  top: 100px;
+  animation-delay: 620ms !important;
+}
+
+.rose-five {
+  right: 48px;
+  top: 96px;
+  animation-delay: 720ms !important;
+}
+
+.sun-one {
+  left: 104px;
+  top: 72px;
+  width: 58px;
+  height: 58px;
+  animation-delay: 560ms !important;
+}
+
+.sun-one::before {
+  inset: 17px;
+  background: #a45a18;
+}
+
+.sun-one::after {
+  background:
+    radial-gradient(circle at 50% 0, #ffd35e 0 27%, transparent 28%),
+    radial-gradient(circle at 85% 15%, #ffd35e 0 22%, transparent 23%),
+    radial-gradient(circle at 100% 50%, #ffcf4f 0 27%, transparent 28%),
+    radial-gradient(circle at 85% 85%, #ffd35e 0 22%, transparent 23%),
+    radial-gradient(circle at 50% 100%, #ffcf4f 0 27%, transparent 28%),
+    radial-gradient(circle at 15% 85%, #ffd35e 0 22%, transparent 23%),
+    radial-gradient(circle at 0 50%, #ffcf4f 0 27%, transparent 28%),
+    radial-gradient(circle at 15% 15%, #ffd35e 0 22%, transparent 23%),
+    radial-gradient(circle at 50% 50%, #f7b22d 0 42%, transparent 43%);
+}
+
+.promise-letter {
+  width: min(360px, 100%);
+  margin-top: -4px;
+  border: 1px solid rgba(79, 29, 40, 0.28);
+  border-radius: 4px;
+  padding: 16px 18px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 248, 250, 0.96)),
+    repeating-linear-gradient(0deg, transparent 0 27px, rgba(237, 111, 132, 0.12) 28px 29px);
+  color: var(--rose-dark);
+  text-align: left;
+  transform: rotate(-2deg);
+  box-shadow: 0 14px 34px rgba(184, 50, 104, 0.14);
+}
+
+.promise-letter span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--rose);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.promise-letter p {
+  margin: 0;
+  color: var(--rose-dark);
+  font-family: var(--font-serif);
+  font-size: clamp(1.22rem, 4vw, 1.72rem);
+  font-weight: 700;
+  line-height: 1.16;
+}
+
+.flower-scene.show .promise-letter {
+  animation: letterSlide 620ms ease-out 780ms both;
 }
 
 .gift-flower {
@@ -1211,6 +1416,25 @@ h3 {
   100% {
     opacity: 1;
     transform: translate(0, 0) rotate(8deg) scale(1);
+  }
+}
+
+@keyframes bouquetBloom {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes letterSlide {
+  from {
+    opacity: 0;
+    transform: translateY(18px) rotate(-5deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(-2deg);
   }
 }
 
