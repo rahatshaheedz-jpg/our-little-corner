@@ -9,7 +9,7 @@ export function Footer() {
           Made with love, just for you.
         </p>
         <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
-          [Your Name] &nbsp;·&nbsp; [Special Date]
+          Rahat
         </p>
       </div>
     </footer>

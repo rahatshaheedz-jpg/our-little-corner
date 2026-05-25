@@ -14,7 +14,7 @@ export function Hero() {
       />
       <div className="mx-auto max-w-3xl text-center">
         <p className="animate-fade-in-slow font-script text-2xl text-[color:var(--rose-deep)] md:text-3xl">
-          for [Her Name]
+          for Tania
         </p>
         <h1 className="mt-6 animate-fade-up font-serif text-5xl leading-[1.05] text-balance text-foreground md:text-7xl lg:text-[5.5rem]">
           A small corner of <br className="hidden md:block" />
