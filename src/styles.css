@@ -1,6 +1,7 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Dancing+Script:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap");
 
 @custom-variant dark (&:is(.dark *));
 
@@ -59,29 +60,55 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-rose-soft: var(--rose-soft);
+  --color-rose-deep: var(--rose-deep);
+  --color-blush: var(--blush);
+  --color-cream: var(--cream);
+  --color-gold-soft: var(--gold-soft);
+  --font-serif: "Cormorant Garamond", serif;
+  --font-script: "Dancing Script", cursive;
+  --font-sans: "Inter", system-ui, sans-serif;
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --radius: 1.25rem;
+  /* Romantic blush palette */
+  --background: oklch(0.985 0.012 15);          /* warm cream-white */
+  --foreground: oklch(0.32 0.08 20);            /* deep rose-brown */
+  --card: oklch(0.99 0.008 15);
+  --card-foreground: oklch(0.32 0.08 20);
+  --popover: oklch(0.99 0.008 15);
+  --popover-foreground: oklch(0.32 0.08 20);
+  --primary: oklch(0.68 0.16 15);               /* soft rose */
+  --primary-foreground: oklch(0.99 0.005 15);
+  --secondary: oklch(0.94 0.03 15);             /* pastel pink */
+  --secondary-foreground: oklch(0.4 0.1 20);
+  --muted: oklch(0.96 0.015 20);
+  --muted-foreground: oklch(0.5 0.06 20);
+  --accent: oklch(0.88 0.06 30);                /* warm beige */
+  --accent-foreground: oklch(0.32 0.08 20);
+  --destructive: oklch(0.6 0.22 25);
+  --destructive-foreground: oklch(0.99 0.005 15);
+  --border: oklch(0.92 0.025 15);
+  --input: oklch(0.92 0.025 15);
+  --ring: oklch(0.78 0.12 15);
+
+  /* Romantic accent tokens */
+  --rose-soft: oklch(0.85 0.08 15);
+  --rose-deep: oklch(0.58 0.18 18);
+  --blush: oklch(0.92 0.045 15);
+  --cream: oklch(0.97 0.018 60);
+  --gold-soft: oklch(0.82 0.09 75);
+
+  /* Gradients & shadows */
+  --gradient-romantic: linear-gradient(135deg, oklch(0.96 0.025 15) 0%, oklch(0.92 0.045 15) 50%, oklch(0.88 0.06 30) 100%);
+  --gradient-rose: linear-gradient(135deg, oklch(0.78 0.13 15) 0%, oklch(0.65 0.18 18) 100%);
+  --gradient-glow: radial-gradient(circle at 50% 0%, oklch(0.94 0.05 15 / 0.7), transparent 60%);
+  --shadow-soft: 0 10px 40px -10px oklch(0.65 0.18 18 / 0.18);
+  --shadow-petal: 0 20px 60px -20px oklch(0.65 0.18 18 / 0.25);
+  --shadow-glow: 0 0 60px oklch(0.85 0.12 15 / 0.4);
+  --transition-soft: cubic-bezier(0.4, 0, 0.2, 1);
+
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -138,7 +165,99 @@
   }
 
   body {
-    background-color: var(--color-background);
+    background: var(--gradient-romantic);
+    background-attachment: fixed;
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .font-serif { font-family: var(--font-serif); }
+  .font-script { font-family: var(--font-script); }
+  .font-sans { font-family: var(--font-sans); }
+
+  .text-balance { text-wrap: balance; }
+
+  .gradient-rose-text {
+    background: var(--gradient-rose);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-petal { box-shadow: var(--shadow-petal); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+
+  .glass-card {
+    background: oklch(1 0 0 / 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid oklch(1 0 0 / 0.5);
+  }
+}
+
+/* ---------- Romantic animations ---------- */
+@keyframes float-up {
+  0% { transform: translateY(110vh) translateX(0) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.9; }
+  90% { opacity: 0.9; }
+  100% { transform: translateY(-10vh) translateX(40px) rotate(360deg); opacity: 0; }
+}
+
+@keyframes sparkle {
+  0%, 100% { transform: scale(0) rotate(0deg); opacity: 0; }
+  50% { transform: scale(1) rotate(180deg); opacity: 1; }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  10%, 30% { transform: scale(1.12); }
+  20% { transform: scale(0.96); }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.animate-float-up { animation: float-up 12s linear infinite; }
+.animate-sparkle { animation: sparkle 3s ease-in-out infinite; }
+.animate-heartbeat { animation: heartbeat 1.6s ease-in-out infinite; }
+.animate-fade-up { animation: fade-up 0.9s var(--transition-soft) both; }
+.animate-fade-in-slow { animation: fade-in 1.4s ease-out both; }
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.9s var(--transition-soft), transform 0.9s var(--transition-soft);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
