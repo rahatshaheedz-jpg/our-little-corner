@@ -4,10 +4,6 @@ import { Heart } from "lucide-react";
 export function Confession() {
   const [answered, setAnswered] = useState<string | null>(null);
   const [absoluteCount, setAbsoluteCount] = useState(0);
-  const [noPos, setNoPos] = useState<{ x: number; y: number } | null>(null);
-
-  // Tiny playful "no" button — gently dodges (we don't even have one labeled "no",
-  // so instead, the "Yes" button gets bigger each time you tap "Absolutely yes")
 
   return (
     <section className="relative overflow-hidden px-6 py-32">
@@ -90,8 +86,6 @@ export function Confession() {
           </div>
         )}
       </div>
-      {/* dummy ref to keep noPos used (future use) */}
-      <span className="hidden">{noPos?.x}</span>
     </section>
   );
 }
