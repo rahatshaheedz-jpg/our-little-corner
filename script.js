@@ -196,7 +196,6 @@ const galleryModal = document.querySelector("[data-gallery-modal]");
 const galleryImage = document.querySelector("[data-gallery-image]");
 const galleryCaption = document.querySelector("[data-gallery-caption]");
 const memoryGrid = document.querySelector("[data-memory-grid]");
-const toast = document.querySelector("[data-toast]");
 const noButton = document.querySelector("[data-no]");
 const flowerScene = document.querySelector("[data-flower-scene]");
 const flowerYesButton = document.querySelector("[data-flower-yes]");
@@ -297,15 +296,18 @@ function celebrate(event) {
       floatHeart(startX + Math.random() * 80 - 40, startY + Math.random() * 30 - 15);
     }, i * 35);
   }
-
-  toast.classList.add("show");
-  window.setTimeout(() => toast.classList.remove("show"), 3400);
 }
 
 function showFlowerScene() {
   flowerScene.classList.remove("show");
+  flowerScene.hidden = false;
   window.setTimeout(() => flowerScene.classList.add("show"), 20);
-  window.setTimeout(() => flowerScene.classList.remove("show"), 5200);
+  window.setTimeout(() => {
+    flowerScene.classList.remove("show");
+    window.setTimeout(() => {
+      flowerScene.hidden = true;
+    }, 260);
+  }, 5200);
 }
 
 function moveNoButton() {
